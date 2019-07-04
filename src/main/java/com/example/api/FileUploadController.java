@@ -2,8 +2,6 @@ package com.example.api;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,7 +31,6 @@ public class FileUploadController {
 
     @PostMapping("/")
     public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
-        ObjectMapper mapper = new ObjectMapper();
         try{
             response = imageService.createImage(file);
             //JSON.stringify(response, null, 4);
