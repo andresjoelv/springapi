@@ -18,7 +18,8 @@ The response payload returns the following structured attributes represented in 
 * [metadata extractor](https://github.com/drewnoakes/metadata-extractor) - Extracts Exif, IPTC, XMP, ICC and other metadata from image and video files
 
 ## Installation 
-Clone this repo to local computer and open with preferred IDE or text editor. Build and run the application and 
+Clone this repo to local computer and open with preferred IDE or text editor. Build and run the application
+![](installation.gif) 
 
 
 ## Usage
