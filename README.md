@@ -1,4 +1,4 @@
-# SpringAPI
+# SpringAPI ✔️
 API using Spring Boot (Java) which allows a client to provide a photo and return metadata (EXIF) contained in the photo.
 
 ## Description
