@@ -16,3 +16,8 @@ The response payload returns the following structured attributes represented in 
 ### Third party EXIF library to extract data from photo.
 
 * [metadata extractor](https://github.com/drewnoakes/metadata-extractor) - Extracts Exif, IPTC, XMP, ICC and other metadata from image and video files
+
+## Installation 
+clone to local computer and open with preferred IDE or text editor. Build and  run the application and head to http://localhost:8080/. Click on the *Choose file* button and select an image of your choice and click *Upload*
+
+A JSON object containing the metadata of the image should be displayed.
