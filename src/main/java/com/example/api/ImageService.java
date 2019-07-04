@@ -13,15 +13,13 @@ public class ImageService {
     public JSONObject createImage(MultipartFile file) {
 
         if(!file.isEmpty()) {
-            System.out.println("inside ImageService createImage()");
             ExtractTags extractAllTags = new ExtractTags();
 
-            //extractAllTags.getTags();
-            System.out.println("\n\n\n Has this ");
+            System.out.println("\n\n\n JSON Response ");
             response = extractAllTags.getSpecificTag(file);  
         }
         else{
-            System.out.println("fail ImageService createImage()");
+            System.out.println("error - file empty!");
         }
 
         return response;

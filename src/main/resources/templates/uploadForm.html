@@ -18,10 +18,10 @@
 		</ul>
     </div>
     
-    <div th:if="${message}">
-        <h2>Json Response</h2>
-        <p th:text="${message}"></p>
-    </div>
+    <fieldset th:if="${message}">
+        <legend>JSON Response</legend>
+        <strong th:text="${message}"></strong>
+    </fieldset>
 
 </body>
 </html>

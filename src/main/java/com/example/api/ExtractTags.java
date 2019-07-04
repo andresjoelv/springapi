@@ -3,23 +3,18 @@ package com.example.api;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Directory;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.Tag;
-import com.drew.metadata.exif.*;
-import com.drew.metadata.iptc.*;
-import com.drew.metadata.jpeg.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONObject;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.logging.Logger;
-import java.util.Iterator;
 import java.util.logging.Level;
 
 
@@ -31,32 +26,10 @@ public class ExtractTags {
     String tag;
     String height, width, date, size, name;
     File image;
-    // File jpegFile = new File("C:\\aecu-can\\gallery\\9-exotism.jpg");
-
-    // public String getTags(MultipartFile file) {
-
-    //     try {
-
-    //         image = convert(file);
-
-    //         Metadata metadata = ImageMetadataReader.readMetadata(image);
-
-    //         for (Directory directory : metadata.getDirectories()) {
-    //             for (Tag allTags : directory.getTags()) {
-
-    //                 System.out.println(allTags);
-    //             }
-    //         }
-    //     } catch (ImageProcessingException ex) {
-    //         Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
-    //     } catch (Exception ex) {
-    //         Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
-    //     }
-    //     return allTags;
-    // }
 
     public JSONObject getSpecificTag(MultipartFile file){
         JSONObject json = new JSONObject();
+        ObjectMapper mapper = new ObjectMapper();
         try {
             
             image = convert(file);
@@ -92,7 +65,10 @@ public class ExtractTags {
             json.put("Desc", name);
 
             message = json.toString();
-            System.out.println(message);
+
+            Object json1 = mapper.readValue(message, Object.class);
+            String indented = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json1);
+            System.out.println(indented);
             
         } catch (ImageProcessingException ex) {
             Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
