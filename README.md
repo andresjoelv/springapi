@@ -28,3 +28,4 @@ Head to http://localhost:8080/. Click on the **Choose file** button and select a
 
 ## Console
 Go into your Debug console to see the JSON response formatted.
+![console](console.png)
