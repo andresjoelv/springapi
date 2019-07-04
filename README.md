@@ -1,4 +1,4 @@
-# SpringAPI :space_invader: ✔️
+# SpringAPI :space_invader:
 API using Spring Boot (Java) which allows a client to provide a photo and return metadata (EXIF) contained in the photo.
 
 ## Description
@@ -8,10 +8,10 @@ Allows a client to provide the photo via an RPC over HTTP with a JSON data inter
 ### Prerequisites
 The response payload returns the following structured attributes represented in a JSON object.
 
-* File length
-* Datetime (timestamp) of the photo
-* Dimensions of the photo
-* Description of the photo
+* File length :heavy_check_mark:
+* Datetime (timestamp) of the photo :heavy_check_mark:
+* Dimensions of the photo :heavy_check_mark:
+* Description of the photo :heavy_check_mark:
 
 ### Third party EXIF library to extract data from photo.
 
