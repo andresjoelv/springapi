@@ -24,6 +24,7 @@ Clone this repo to local computer and open with preferred IDE or text editor. Bu
 
 ## Usage
 Head to http://localhost:8080/. Click on the **Choose file** button and select an image of your choice and click **Upload**. A JSON object containing the metadata of the image should be displayed.
+![](usage.gif)
 
 ## Console
 Go into your Debug console to see the JSON response formatted.
