@@ -13,7 +13,7 @@ The response payload returns the following structured attributes represented in 
 * Dimensions of the photo :heavy_check_mark:
 * Description of the photo :heavy_check_mark:
 
-### Third party EXIF library to extract data from photo.
+### Third party EXIF library to extract data from photo. :100:
 
 * [metadata extractor](https://github.com/drewnoakes/metadata-extractor) - Extracts Exif, IPTC, XMP, ICC and other metadata from image and video files
 
